@@ -6,20 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>22-web-bootstrap.html</title>
-    
+    <style>
+         .jumbotron {
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        video {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /*  object-fit is not supported on IE  */
+            object-fit: cover;
+            /* opacity: 0.5; */
+        }
+
+        .container {
+            z-index: 2;
+            position: relative;
+        }
+    </style>
 </head>
 
 
 <body>
     
-    <div class="jumbotron mb-0" style="background-image: url(http://1.bp.blogspot.com/-7bg8X5hTrqE/UUskQu74TtI/AAAAAAAAInM/_V-c7edRCE8/s1600/leaves_close_up-wallpaper-2560x1600.jpg);">
-        <h1 class="display-3">Thitirat Website</h1>
+    <div class="jumbotron jumbotron-fluid mb-0" style="background-image: url(http://1.bp.blogspot.com/-7bg8X5hTrqE/UUskQu74TtI/AAAAAAAAInM/_V-c7edRCE8/s1600/leaves_close_up-wallpaper-2560x1600.jpg);">
+      <video src="https://cdn.videvo.net/videvo_files/video/free/2014-06/large_watermarked/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4"autoplay loop muted>
+      </video>
+      <div class="container text-light">
+      <h1 class="display-3">Thitirat Website</h1>
         <p class="lead">rayong technical college</p>
         <!--<hr class="my-2">
         <p>More info</p>
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
         </p>-->
+        </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-alt-low-fill" viewBox="0 0 16 16">
@@ -65,7 +91,7 @@
                 <div class="card" style="width: 18rem;">
                     <img src="https://cdn.readawrite.com/articles/3245/3244712/thumbnail/large.gif?3" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title">ข้อมูลนักเรียน</h5>
                       <p class="card-text">
                           <div class="form-group">
                             <label for="">รหัสนักเรียน</label>
@@ -78,17 +104,17 @@
                             <small id="helpId" class="text-muted"></small>
                           </div>
                       </p>
-
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <button type="submit" class="btn btn-primary"  onclick="display_data()">Submit</button>
+                     <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="card" style="width: 18rem;">
                         <img src="https://i.pinimg.com/474x/5b/44/8d/5b448da76cd72ffb947be9db9d8a4e7f.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">ผลลัพธ์  </h5>
+                          <p class="card-text" id="output"></p>
+                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
                         </div>
                     
                   </div>
@@ -98,5 +124,17 @@
       </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-</body>
+
+      <script>
+        let sid
+        let sname
+        function display_data() {
+          sid = document.getElementById('sid').value
+          sname = document.getElementById('sname').value
+          document.getElementById('output').innerHTML = sid +' '+sname
+          document.getElementById('sid').value=''
+          document.getElementById('sname').value=''
+        }
+      </script>
+  </body>
 </html>
