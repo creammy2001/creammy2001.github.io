@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--ลิงค์bs-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!--ลิงค์font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Mali:wght@200&family=Mitr:wght@200&display=swap" rel="stylesheet">
+   
+    <!--ลิงค์กับCSS-->
+    <link rel="stylesheet" href="23-style.css">
+    <title>23-html-css-js.html</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid mb-0" style="background-image: url(http://1.bp.blogspot.com/-7bg8X5hTrqE/UUskQu74TtI/AAAAAAAAInM/_V-c7edRCE8/s1600/leaves_close_up-wallpaper-2560x1600.jpg);">
+        
+    <video src="https://cdn.videvo.net/videvo_files/video/free/2019-07/large_watermarked/Raw_Vegan_Blueberry_Cake_Cut_Birthday_Cooking_preview.mp4"autoplay loop muted>
+     </video>
+          
+    <div class="container text-light">
+    <h1 class="display-3">Thitirat Website</h1>
+    <p class="lead">rayong technical college</p>
+    </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-alt-low-fill" viewBox="0 0 16 16">
+            <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm5 6a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM2 11a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm10.243-3.536a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm-8.486-.707a.5.5 0 1 0 .707.707.5.5 0 0 0-.707-.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z"/>
+          </svg>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container p-5">
+        <div class="row">
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.pinimg.com/564x/c7/20/09/c72009095252f1e964300ce12835b969.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">ข้อมูลนักเรียน</h5>
+                  <p class="card-text">
+                      <div class="form-group">
+                        <label for="">รหัสนักเรียน</label>
+                        <input type="text" name="" id="sid" class="form-control" placeholder="" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                      </div>
+                      <div class="form-group">
+                        <label for="">ชื่อ-นามสกุล</label>
+                        <input type="text" name="" id="sname" class="form-control" placeholder="" aria-describedby="helpId">
+                        <small id="helpId" class="text-muted"></small>
+                      </div>
+                  </p>
+                  <button type="submit" class="btn "  onclick="display_data()">Submit</button>
+                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://i.pinimg.com/564x/0a/bb/40/0abb400b137598bf1be863c7090ad75b.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ผลลัพธ์  </h5>
+                      <p class="card-text" id="output"></p>
+                     <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                    </div>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- JAVA ของ Bootstrap 4.6-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    <script src="23-java-script.js"></script>
+</body>
+</html>
